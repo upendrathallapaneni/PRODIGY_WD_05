@@ -1,0 +1,193 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-main: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --accent-blue: #38bdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    /* Beautiful smooth gradient resembling a moody atmospheric sky */
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+
+/* Glassmorphism Weather Dashboard Card */
+
+.weather-app {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Custom Search Controls Layout */
+
+.search-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+input {
+    flex: 1;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--glass-border);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: var(--accent-blue);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.btn-search {
+    background-color: var(--accent-blue);
+    color: #0f172a;
+    padding: 0 1.2rem;
+}
+
+.btn-search:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-1px);
+}
+
+.btn-geo {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 0 0.8rem;
+    font-size: 1.2rem;
+}
+
+.btn-geo:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Error banner */
+
+.error-msg {
+    display: none;
+    background-color: rgba(244, 63, 94, 0.2);
+    border: 1px solid rgba(244, 63, 94, 0.4);
+    color: #fda4af;
+    padding: 0.75rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* Weather Information Container styling */
+
+.weather-info {
+    display: block;
+    /* Updated dynamically via JS when a new city is loaded */
+    text-align: center;
+}
+
+.location-box h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.location-box .date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.current-weather {
+    margin: 2rem 0;
+}
+
+#weatherIcon {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3));
+}
+
+.temp-container {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.temp-container .unit {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    font-weight: 400;
+    vertical-align: super;
+}
+
+.condition {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+}
+
+
+/* Dashboard Information Secondary Grid Layout */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1.5rem;
+}
+
+.detail-card {
+    background: rgba(15, 23, 42, 0.2);
+    padding: 1rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.detail-card .label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.detail-card .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+}

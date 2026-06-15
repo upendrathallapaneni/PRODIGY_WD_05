@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Weather</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+
+<body>
+
+    <div class="weather-app">
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+            <button id="searchBtn" class="btn-search">Search</button>
+            <button id="geoBtn" class="btn-geo" title="Use current location">
+                📍
+            </button>
+        </div>
+
+        <div class="error-msg" id="errorMsg">City not found. Please try again.</div>
+
+        <div class="weather-info" id="weatherInfo">
+            <div class="location-box">
+                <h2 id="cityName">London, GB</h2>
+                <div id="dateTime" class="date">Monday, 12:00 PM</div>
+            </div>
+
+            <div class="current-weather">
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" id="weatherIcon" alt="Weather Icon">
+                <div class="temp-container">
+                    <span id="temperature">21</span><span class="unit">°C</span>
+                </div>
+                <div id="description" class="condition">Moderate Rain</div>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="label">Feels Like</span>
+                    <span class="value" id="feelsLike">20°C</span>
+                </div>
+                <div class="detail-card">
+                    <span class="label">Humidity</span>
+                    <span class="value" id="humidity">72%</span>
+                </div>
+                <div class="detail-card">
+                    <span class="label">Wind Speed</span>
+                    <span class="value" id="windSpeed">4.2 m/s</span>
+                </div>
+                <div class="detail-card">
+                    <span class="label">Pressure</span>
+                    <span class="value" id="pressure">1012 hPa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="task5.js"></script>
+</body>
+
+</html>
