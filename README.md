@@ -19,4 +19,3 @@ Before running the application, make sure to add your OpenWeatherMap API credent
 2. Open the local `script.js` file.
 3. Replace the placeholder value at the top of the script with your 32-character key token:
 ```javascript
-   const API_KEY = "YOUR_REAL_API_KEY_HERE";
